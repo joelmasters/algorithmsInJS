@@ -1,5 +1,7 @@
 # Binary Search implementation in JavaScript
 
+## O(logn)
+
 ## Given a sorted array of values [], find if the value n is in the array:
 * Test case: arr: [1, 2, 4, 5, 8, 9, 10, 12], num: 4 ==> returns 2
 * Test case: arr: [1, 2, 4, 5, 8, 9, 10, 12], num: 7 ==> returns -1
