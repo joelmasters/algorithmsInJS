@@ -10,16 +10,17 @@ binarySearch = (arr, num) => {
   let end = arr.length-1;
   let middle = Math.floor((start + end)/2);
   
-  while (start < end) {
+  while (start <= end) {
     if (num === arr[middle]) {
-      // if number is found, return the index
       return middle;
-    } else if (num < middle) {
-      // number is below the middle, set the end pointer to the middle
-      end = middle;
+    } else if (num < arr[middle]) {
+      // number is below the middle, set the end pointer to the middle - 1
+      //    - 1 because we know middle is not a solution, and don't need to check it again
+      end = middle - 1;
     } else {
-      // number is above the middle, set the start pointer to the middle
-      start = middle;
+      // number is above the middle, set the start pointer to the middle + 1
+      //    + 1 because we know middle is not a solution, and don't need to check it again
+      start = middle + 1;
     }
     // re-calculate the middle pointer
     middle = Math.floor((start+end)/2);
