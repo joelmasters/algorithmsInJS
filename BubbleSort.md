@@ -3,9 +3,9 @@
 
 ## Runtime: O(n^2)
 
-## Given a sorted array of values [], find if the value n is in the array:
-* Test case: arr: [1, 2, 4, 5, 8, 9, 10, 12], num: 4 ==> returns 2
-* Test case: arr: [1, 2, 4, 5, 8, 9, 10, 12], num: 7 ==> returns -1
+## Given an array of values, return the array sorted:
+* Test case: arr: [1, 2, 4, 5, 8] ==> returns [1, 2, 4, 5, 8]
+* Test case: arr: [1, 8, 5, 2, 4] ==> returns [1, 2, 4, 5, 8]
 
 ### Steps:
 ```pseudo
