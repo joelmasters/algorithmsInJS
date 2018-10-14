@@ -14,7 +14,7 @@
     4. if the value at the middle index does not equal the value we are looking for, continue
     5. if the value is less than the value at the middle index, move the last index to the middle index -1
     6. if the value is greater than the value at the middle index, move the start index to the middle index + 1
-    7. calculate the index between the new start and end indices, and search again
+    7. calculate the new middle index between the new start and end indices, and search again
   8. if the start index has crossed over the end index (start > end), the value we are looking for is not in the array
     9. return -1
 ```
