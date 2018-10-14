@@ -2,6 +2,7 @@
 # Selection Sort implementation in JavaScript
 
 ## Runtime: O(n^2)
+## Best for: Minimizing number of swaps (writing to memory)
 
 ## Given an array of values, return the array sorted:
 * Test case: arr: [1, 2, 4, 5, 8] ==> returns [1, 2, 4, 5, 8]
@@ -9,36 +10,32 @@
 
 ### Steps:
 ```pseudo
-  1. Compare first two elements in array
-    2. If the first element is less than the second element, move to next element
-    3. If the the first element is greater than the second element, switch the first and second elements
-  4. Repeat next two elements in the array (2nd and 3rd)
-  5. Repeat for all unsorted elements in the array
-  6. When the end is reached, start over from the beginning
-  7. Repeat until no changes are made
+  1. Look at all the elements in the array and find the minimum
+  2. Swap the value in the first position in the array with the value of the minimum
+  3. Look at all elements in the array except the first and find the minimum
+  4. Swap the value in the second position in the array with the value of that minimum
+  5. Repeat for all spaces in the array
 ```
 ### JavaScript Implementation:
 ```JS
-bubbleSort = (arr) => {
-  let sortedCount = 0;
-  while (sortedCount < arr.length) {
-    let swapped = false;
-    for (let i = 0; i < arr.length - 1 - sortedCount; i++) {
-      if (arr[i] > arr[i+1]) {
-        let temp = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = temp;
-        swapped = true;
+selectionSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
       }
     }
-    if (!swapped) return arr;
-    sortedCount++;
-   }
+    if (i !== minIndex) {
+      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    }
+  }
+  return arr;
 }
 ```
 
 ### Visualization
 https://visualgo.net/en/sorting
-
+Click on 'Bubble Sort'
     
   
