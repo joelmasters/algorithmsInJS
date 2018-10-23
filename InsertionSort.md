@@ -2,7 +2,7 @@
 # Insertion Sort implementation in JavaScript
 
 ## Runtime: O(n^2)
-## Best for: Minimizing number of swaps (writing to memory)
+## Best for: Online sorting
 
 ## Given an array of values, return the array sorted:
 * Test case: arr: [1, 2, 4, 5, 8] ==> returns [1, 2, 4, 5, 8]
@@ -19,14 +19,10 @@
 insertionSort = (arr) => {
   for (let i = 1; i < arr.length; i++) {
     let currentVal = arr[i];
-    for (let j = i-1; j >= 0; j--) {
-      if (currentVal < arr[j]) {
-        arr[j+1] = arr[j];
-      } else {
-        arr[j+1] = currentVal;
-        break;
-      }
+    for (let j = i-1; j >= 0 && arr[j] > currentVal; j--) {
+        arr[j+1] = arr[j]  
     }
+    arr[j+1] = currentVal;
   }
   return arr;
 }
