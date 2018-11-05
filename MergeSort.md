@@ -35,20 +35,29 @@ mergeArrays = (arr1, arr2) => {
     }
    }
    while (i < arr1.length) {
-    returnArr.push(arr[i]);
+    returnArr.push(arr1[i]);
     i++;
    }
    while (j < arr2.length) {
-    returnArr.push(arr[j]);
+    returnArr.push(arr2[j]);
     j++;
    }
    return returnArr;
+}
+
+mergeSort = (arr) => {
+  if (arr.length <= 1) {
+    return arr;
   }
+  let mid = Math.floor(arr.length/2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+  return mergeArrays(left, right);
 }
 ```
 
 ### Visualization
 https://visualgo.net/en/sorting
-Click on 'Insertion Sort'
+Click on 'Merge Sort'
     
   
