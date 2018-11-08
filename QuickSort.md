@@ -1,5 +1,5 @@
 
-# Merge Sort implementation in JavaScript
+# Quick Sort implementation in JavaScript
 
 ## Runtime: O(nlogn)
 ## Best for: Online sorting
