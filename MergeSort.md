@@ -2,7 +2,7 @@
 # Merge Sort implementation in JavaScript
 
 ## Runtime: O(nlogn)
-## Best for: Online sorting
+## Best for: Sort optimization
 
 ## Given an array of values, return the array sorted:
 * Test case: arr: [1, 2, 4, 5, 8] ==> returns [1, 2, 4, 5, 8]
