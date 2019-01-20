@@ -1,8 +1,8 @@
 
 # Quick Sort implementation in JavaScript
 
-## Runtime: O(nlogn)
-## Best for: Online sorting
+## Runtime: O(nlogn), worst case: O(n^2)
+## Best for: Sorting random arrays
 
 ## Given an array of values, return the array sorted:
 * Test case: arr: [1, 2, 4, 5, 8] ==> returns [1, 2, 4, 5, 8]
