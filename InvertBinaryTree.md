@@ -1,6 +1,6 @@
 # Invert a binary tree in JavaScript
 
-## Runtime: 
+## Runtime: O(n)
 
 ## Given a tree made of nodes in the form:
 ```JS
