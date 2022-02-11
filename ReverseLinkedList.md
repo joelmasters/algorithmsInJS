@@ -19,8 +19,6 @@ function Node(value) {
     b. Set the next node node equal to the previous node
     c. Set the previous node equal to the current node
     d. Set the current node equal to the temp node (step forward)
-  8. if the start index has crossed over the end index (start > end), the value we are looking for is not in the array
-    9. return -1
 ```
 ### JavaScript Implementation:
 ## Iterative:
